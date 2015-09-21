@@ -9,33 +9,36 @@
   }
   console.log('1');
 
-  //$('select option:selected').change(function() {
-    //$( "select option:selected" ).each(function() {
-      //$('body').css('background', 'url(' + cityImages[0] + ')');
+  $('select').change(function () {
+    console.log('2');
+    var selectedVal = $('select').val();
 
-    switch (cityName) {
-    case 'NYC':
-    $('body').css('background', 'url(' + cityImages[0] + ')');
-    break;
-      console.log('2');
-    case 'SF':
-    $('body').css('background', 'url(' + cityImages[1] + ')');
-    break;
-    case 'LA':
-    $('body').css('background', 'url(' + cityImages[2] + ')');
-    break;
-    case 'SYD':
-    $('body').css('background', 'url(' + cityImages[3] + ')');
-    break;
-    case 'ATX':
-    $('body').css('background', 'url(' + cityImages[4] + ')');
-    break;
-    }
-
-
-    //});
+      switch (selectedVal) {
+        case 'NYC':
+          console.log('3')
+          $('body').css('background', 'url(' + cityImages[0] + ')');
+          break;
+        case 'SF':
+          $('body').css('background', 'url(' + cityImages[1] + ')');
+          break;
+        case 'LA':
+          $('body').css('background', 'url(' + cityImages[2] + ')');
+          break;
+        case 'SYD':
+          $('body').css('background', 'url(' + cityImages[3] + ')');
+          break;
+        case 'ATX':
+          $('body').css('background', 'url(' + cityImages[4] + ')');
+          break;
+      }
 
 
+  });
+
+});
+    //$('select option:selected').change(function() {
+      //$( "select option:selected" ).each(function() {
+        //$('body').css('background', 'url(' + cityImages[0] + ')');
 
   //});
 
@@ -87,5 +90,3 @@
   $('#submit-btn').click(changeImage);
 
 */
-
-});
