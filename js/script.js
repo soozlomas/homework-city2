@@ -1,16 +1,21 @@
   $(document).ready(function(){
 
+  // create array for city photos
   var cityImages = ['images/nyc.jpg','images/sf.jpg','images/la.jpg','images/sydney.jpg','images/austin.jpg'];
 
+  // create array for city names for use later in switch statement cases
   var cityName = ['NYC','SF','LA','SYD','ATX'];
 
+  // populate the drop down incrementally
   for(var cityList = 0; cityList < cityName.length; cityList++) {
     $('#city-type').append($('<option> </option>').val(cityName[cityList]).html(cityName[cityList]));
   }
 
+  // create seletedVal variable and set it to the current city option in the dropdown
   $('select').change(function () {
     var selectedVal = $('select').val();
-    console.log(selectedVal);
+
+      // for each drop down option show the appropriate index from the array
       switch (selectedVal) {
         case 'NYC':
           console.log ('nyc')
